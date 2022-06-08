@@ -31,9 +31,6 @@
     </div>
   </nav>
   
-  
-
-    
     <svg id="clouds" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
         <path d="M-5 100 Q 0 20 5 100 Z
              M0 100 Q 5 0 10 100
@@ -63,21 +60,24 @@
 
     <div class = 'container'>
 
-      <div class="row justify-content-md-center">
        
         <div class= "col-xxl-1 navblockchain white-grad">
           <img src="image/eth-logo.svg" alt="" width="32" height="32"> Ethereum
         </div>
+        <div class="row justify-content-md-center">
 
       <div class="row justify-content-md-center">
         <div class="col-sm-6">
           <div class="input-group mb-3 ntransp">
             <span class="input-group-text ">#</span>
-            <input type="text" class="form-control" placeholder="Wallet">
+            <input id = 'wallet-form' type="text" class="form-control" placeholder="Wallet">
           </div>
         </div> 
       </div>
-      </div>
+    </div>
+
+      <div id ='wallet-balance'class = 'walletbalance'></div>
+      
     </div>
     </section>
     

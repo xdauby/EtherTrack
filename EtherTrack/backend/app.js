@@ -10,26 +10,14 @@ app.use((req, res, next) => {
     next();
   });
 
-app.use('/api/stuff', (req, res, next) => {
-    res.status(201).json({
-        message: 'ok !'
-      });   
-    next()
-});
-
-app.post('/Balance', (req, res, next) => {
-    
-
-
-    var balance = require ('./balance.js');
-    walletAddress = req.body['walletAddress']
-    balance.getBalanceETH(walletAddress).then(res => {console.log(res)});
-    //balance.getBalanceETH('0x3866DaD7fb9672e54daD3e4378aEd0Ed3B747866').then(name => {
-    //    console.log(name);
-    //    })
-
-    res.status(201).json(req.body);
-    next()
+app.use('/Balance/:address', (req, res, next) => {
+      let addr = req.params.address
+      var balance = require ('./balance.js');
+      balance.getBalanceETH(addr).then(balance => { value = {Eth : balance}})
+      setTimeout(() => {
+      res.status(201).json(value)
+      }, 750)
   });
 
+  
 module.exports = app;

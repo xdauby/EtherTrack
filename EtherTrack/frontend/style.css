@@ -46,7 +46,7 @@
 }
  .clouds {
 	 background: #eaf2f492;
-	 height: 25em;
+	 height: 80%;
 
 }
  .clouds p {
@@ -93,5 +93,16 @@
 	margin: 75px 0;
   }
 
-
-
+.walletbalance {
+	background: 
+	  linear-gradient(#ffffffca 0 0) padding-box, /*this is your grey background*/
+	  linear-gradient(to right, #9c20aa, #fb3570) border-box;
+	color: #313149;
+	padding: 10px;
+	border: 2px solid transparent;
+	border-radius: 45px;
+	display: inline-block;
+	margin: 45px 0;
+	width: 50%;
+	box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
+}
